@@ -4,9 +4,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.kirill.cuturl.dto.UrlRequest;
 import ru.kirill.cuturl.dto.UrlResponse;
+import ru.kirill.cuturl.entity.Url;
+import ru.kirill.cuturl.exception.UrlNotFoundException;
 import ru.kirill.cuturl.mapper.UrlMapper;
 import ru.kirill.cuturl.repository.UrlRepository;
-
 import java.util.Optional;
 
 @Service
@@ -22,5 +23,11 @@ public class UrlService {
                 .map(urlRepository::save)
                 .map(urlMapper::mapToResponse)
                 .orElseThrow();
+    }
+
+    public Url findUrlByToken(String token) {
+        return urlRepository
+                .findById(token)
+                .orElseThrow(() -> new UrlNotFoundException("url not found"));
     }
 }

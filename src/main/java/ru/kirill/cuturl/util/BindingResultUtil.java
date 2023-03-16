@@ -10,13 +10,13 @@ public class BindingResultUtil {
         StringBuilder errorMessage = new StringBuilder();
         bindingResult
                 .getFieldErrors()
-                .forEach(er -> {
+                .forEach(er ->
                     errorMessage
                             .append(er.getField())
                             .append(": ")
                             .append(er.getDefaultMessage())
-                            .append(";");
-                });
+                            .append(";")
+                );
         return errorMessage.toString();
     }
 }
