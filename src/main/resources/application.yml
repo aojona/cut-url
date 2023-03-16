@@ -8,4 +8,5 @@ spring:
       port: 6379
 
 redis:
-  time-to-live: 100     # expiration time in Redis: must be more 0
+  time-to-live: 100       # expiration time in Redis: must be more 0
+  time-unit: days      # unit of time-to-live: milliseconds, seconds, minutes, hours or days

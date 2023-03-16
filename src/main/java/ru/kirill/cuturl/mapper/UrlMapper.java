@@ -25,7 +25,7 @@ public class UrlMapper implements Mapper<Url, UrlResponse, UrlRequest> {
          return UrlResponse
                  .builder()
                  .shortUrl(getShortUrl(url))
-                 .expireAt(getExpireAt(url))
+                 .expireAt(getExpirationTime(url))
                  .build();
     }
 
@@ -35,9 +35,14 @@ public class UrlMapper implements Mapper<Url, UrlResponse, UrlRequest> {
                 .builder()
                 .token(UUID.randomUUID().toString())
                 .originalUrl(urlRequest.getUrl())
-                .timeToLive(redisProperties.timeToLive())
+                .timeToLive(getTimeToLive())
                 .createdAt(LocalDateTime.now())
                 .build();
+    }
+
+    private long getTimeToLive() {
+        return redisProperties.timeUnit()
+                .convert(redisProperties.timeToLive());
     }
 
     private String getShortUrl(Url url) {
@@ -48,7 +53,7 @@ public class UrlMapper implements Mapper<Url, UrlResponse, UrlRequest> {
                 .toString();
     }
 
-    private String getExpireAt(Url url) {
+    private String getExpirationTime(Url url) {
         return url
                 .getCreatedAt()
                 .plusSeconds(url.getTimeToLive())

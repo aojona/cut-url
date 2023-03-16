@@ -22,12 +22,12 @@ public class UrlController {
     private final UrlService urlService;
 
     @PostMapping
-    public UrlResponse cutUrl(@RequestBody @Valid UrlRequest urlDTO, BindingResult bindingResult) {
+    public ResponseEntity<UrlResponse> cutUrl(@RequestBody @Valid UrlRequest urlDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             String errorMessage = BindingResultUtil.getErrorMessage(bindingResult);
             throw new ShortUrlNotCreatedException(errorMessage);
         }
-        return urlService.cut(urlDTO);
+        return new ResponseEntity<>(urlService.cut(urlDTO), HttpStatus.CREATED);
     }
 
     @GetMapping("{token}")
