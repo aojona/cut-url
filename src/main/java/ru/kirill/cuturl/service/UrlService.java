@@ -1,6 +1,7 @@
 package ru.kirill.cuturl.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import ru.kirill.cuturl.dto.UrlRequest;
 import ru.kirill.cuturl.dto.UrlResponse;
@@ -17,6 +18,7 @@ public class UrlService {
     private final UrlRepository urlRepository;
     private final UrlMapper urlMapper;
 
+    @Cacheable(cacheNames = "urls", key = "#urlDto.url")
     public UrlResponse cut(UrlRequest urlDto) {
         return Optional.of(urlDto)
                 .map(urlMapper::mapToEntity)
@@ -25,6 +27,7 @@ public class UrlService {
                 .orElseThrow();
     }
 
+    @Cacheable(cacheNames = "tokens", key = "#token")
     public Url findUrlByToken(String token) {
         return urlRepository
                 .findById(token)

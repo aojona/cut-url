@@ -11,13 +11,25 @@
 
 ## Функционал
 
-| Метод  | URL     | Операция                 |
-|:------:|---------|--------------------------|
-|  POST  | api/url | генерация простой ссылки |
+| Метод | URL             | Операция                     |
+|:-----:|-----------------|------------------------------|
+| POST  | api/url         | генерация простой ссылки     |
+|  GET  | api/url/{token} | редирект на оригинальный URL |
+
+## Конфигурация
+
+В [application.yml](src/main/resources/application.yml):
+
+- `spring.data.redis.host` — хост сервера Redis
+- `spring.data.redis.port` — порт сервера Redis
+- `spring.cache.redis.time-to-live` — время хранения записи в кэш
+- `redis.time-to-live` – время хранения записи в базе данных
+- `redis.time-unit` – единица измерения `redis.time-to-live`
+
 
 ## Запуск
 
-1. Настроить подключение к Redis в [application.yml](src/main/resources/application.yml) или запустить локально
+1. Настроить подключение к Redis или запустить локально
 ```shell
 docker run --name some-redis -p 6379:6379 -d redis
 ```
@@ -55,4 +67,13 @@ docker run --name some-redis -p 6379:6379 -d redis
 * 400 — Bad Request
 
 ##
+
+ ```http
+ GET /api/url/{token}
+ ```
+
+#### HTTP status:
+
+* 302 — Found
+* 400 — Bad Request
 

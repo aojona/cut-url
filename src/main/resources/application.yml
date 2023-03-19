@@ -1,12 +1,12 @@
-server:
-  port: 8080
-
 spring:
+  cache:
+    redis:
+      time-to-live: 2m     # supported units: ns, us, ms, s, m, h, d
   data:
     redis:
       host: localhost
       port: 6379
 
 redis:
-  time-to-live: 100       # expiration time in Redis: must be more 0
-  time-unit: days      # unit of time-to-live: milliseconds, seconds, minutes, hours or days
+  time-to-live: 100         # expiration time in db: must be more 0
+  time-unit: days           # unit of time-to-live: milliseconds, seconds, minutes, hours or days
