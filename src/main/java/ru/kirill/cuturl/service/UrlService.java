@@ -18,7 +18,7 @@ public class UrlService {
     private final UrlRepository urlRepository;
     private final UrlMapper urlMapper;
 
-    @Cacheable(cacheNames = "urls", key = "#urlDto.url")
+    @Cacheable(cacheNames = "url", key = "#urlDto.url")
     public UrlResponse cut(UrlRequest urlDto) {
         return Optional.of(urlDto)
                 .map(urlMapper::mapToEntity)
@@ -27,7 +27,7 @@ public class UrlService {
                 .orElseThrow();
     }
 
-    @Cacheable(cacheNames = "tokens", key = "#token")
+    @Cacheable(cacheNames = "token", key = "#token")
     public Url findUrlByToken(String token) {
         return urlRepository
                 .findById(token)

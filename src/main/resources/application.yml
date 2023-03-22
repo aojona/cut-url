@@ -1,7 +1,7 @@
 spring:
   cache:
     redis:
-      time-to-live: 2m     # supported units: ns, us, ms, s, m, h, d
+      time-to-live: 2m     # expiration time in cache, supported units: ns, us, ms, s, m, h, d
   data:
     redis:
       host: localhost
@@ -9,4 +9,8 @@ spring:
 
 redis:
   time-to-live: 100         # expiration time in db: must be more 0
-  time-unit: days           # unit of time-to-live: milliseconds, seconds, minutes, hours or days
+  time-unit: days           # unit of expiration time: milliseconds, seconds, minutes, hours or days
+
+strategy:
+  encoder: base_62          # encoder: base-62
+  token-length: 5           # length of token in short url: must be in range 1..255

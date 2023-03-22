@@ -23,8 +23,10 @@
 - `spring.data.redis.host` — хост сервера Redis
 - `spring.data.redis.port` — порт сервера Redis
 - `spring.cache.redis.time-to-live` — время хранения записи в кэш
-- `redis.time-to-live` – время хранения записи в базе данных
-- `redis.time-unit` – единица измерения `redis.time-to-live`
+- `redis.time-to-live` — время хранения записи в базе данных
+- `redis.time-unit` — соответсвующая единица измерения
+- `strategy.encoder` — стратегия генерации простой ссылки
+- `strategy.token-length` — длина простой ссылки
 
 
 ## Запуск

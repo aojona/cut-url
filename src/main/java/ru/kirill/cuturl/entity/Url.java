@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-@RedisHash(value = "url")
+@RedisHash(value = "token")
 @TypeAlias("Url")
 @Builder
 public class Url implements Serializable {
