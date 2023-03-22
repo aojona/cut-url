@@ -5,7 +5,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Strategy {
 
-    BASE62(Base62Encoder.class);
+    BASE_62(Base62Encoder.class),
+    MURMUR_3(MurMur3Encoder.class);
 
     private final Class<? extends UrlEncoder> clazz;
 

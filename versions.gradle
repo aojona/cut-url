@@ -1,0 +1,5 @@
+ext {
+    versions = [
+            'guava': '31.1-jre'
+    ]
+}

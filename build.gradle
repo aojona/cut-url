@@ -5,6 +5,8 @@ plugins {
 	id 'io.freefair.lombok' version '8.0.0-rc2'
 }
 
+apply from: 'versions.gradle'
+
 group = 'ru.kirill'
 version = '0.0.4-SNAPSHOT'
 sourceCompatibility = '17'
@@ -17,6 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation "com.google.guava:guava:${versions.guava}"
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
