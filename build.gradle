@@ -5,7 +5,7 @@ plugins {
 	id 'io.freefair.lombok' version '8.0.0-rc2'
 }
 
-apply from: 'versions.gradle'
+apply from: 'version.gradle'
 
 group = 'ru.kirill'
 version = '0.0.4-SNAPSHOT'

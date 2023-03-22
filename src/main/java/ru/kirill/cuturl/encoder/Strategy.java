@@ -6,7 +6,8 @@ import lombok.RequiredArgsConstructor;
 public enum Strategy {
 
     BASE_62(Base62Encoder.class),
-    MURMUR_3(MurMur3Encoder.class);
+    MURMUR_3(MurMur3Encoder.class),
+    SHA_256(SHA256Encoder.class);
 
     private final Class<? extends UrlEncoder> clazz;
 
