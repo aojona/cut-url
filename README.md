@@ -1,7 +1,7 @@
 # Cut URL
 
 Данный проект представляет собой REST сервис на языке Java для создания простых URL из более сложных. 
-Генерация новой ссылки происходит по одному из алгоритмов: Base62, MurMur3 или SHA-256
+Генерация новой ссылки происходит по одному из алгоритмов: Base-62, MurMur-3 или SHA-256
 
 ## Стек используемых технологий
 
@@ -10,6 +10,7 @@
 * [Lombok](https://projectlombok.org/) — библиотека для генерации boilerplate кода
 * [Redis](https://redis.io) — база данных типа «ключ–значение»
 * [Guava](https://github.com/google/guava) — набор инструментов для повышения качества кода
+* [JUnit 5](https://github.com/junit-team/junit5) — фреймворк для модульного тестирования на Java
 
 ## Функционал
 
@@ -66,7 +67,7 @@ docker run --name some-redis -p 6379:6379 -d redis
 
 #### HTTP status:
 
-* 201 — Created
+* 200 — OK
 * 400 — Bad Request
 
 ##

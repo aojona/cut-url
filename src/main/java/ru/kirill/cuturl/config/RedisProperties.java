@@ -3,7 +3,7 @@ package ru.kirill.cuturl.config;
 import jakarta.validation.constraints.Positive;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
-import ru.kirill.cuturl.util.TimeConverter;
+import ru.kirill.cuturl.integration.util.TimeConverter;
 
 @Validated
 @ConfigurationProperties(prefix = "redis")

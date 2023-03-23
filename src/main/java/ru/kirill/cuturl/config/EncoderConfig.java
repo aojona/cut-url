@@ -9,7 +9,6 @@ import org.springframework.validation.annotation.Validated;
 import ru.kirill.cuturl.encoder.Strategy;
 import ru.kirill.cuturl.encoder.UrlEncoder;
 
-
 @Configuration
 @Validated
 public class EncoderConfig {
