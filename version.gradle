@@ -1,5 +1,6 @@
 ext {
     versions = [
-            'guava': '31.1-jre'
+            'guava': '31.1-jre',
+            'testcontainers': '1.17.6'
     ]
 }
