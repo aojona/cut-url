@@ -47,6 +47,8 @@ docker run --name some-redis -p 6379:6379 -d redis
  ```http
  POST /api/url
  ```
+ 
+ ![short-url-1](https://user-images.githubusercontent.com/112020091/227621584-46796e8e-bc2c-40d0-8207-c242d0f36e6b.svg)
 
 #### Request Body
 
@@ -75,6 +77,8 @@ docker run --name some-redis -p 6379:6379 -d redis
  ```http
  GET /api/url/{token}
  ```
+ 
+![short-url-2](https://user-images.githubusercontent.com/112020091/227621627-bbf35f9c-13ea-40ee-87dc-cf0797ed4544.svg)
 
 #### HTTP status:
 
