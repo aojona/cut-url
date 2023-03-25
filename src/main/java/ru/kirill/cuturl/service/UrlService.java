@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.service;
+package ru.kirill.cuturl.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;

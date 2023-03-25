@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.controller;
+package ru.kirill.cuturl.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -9,8 +9,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.kirill.cuturl.dto.UrlRequest;
-import ru.kirill.cuturl.integration.IntegrationTestBase;
-import ru.kirill.cuturl.integration.util.TestDtoBuilder;
+import ru.kirill.cuturl.IntegrationTestBase;
+import ru.kirill.cuturl.util.TestDtoBuilder;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

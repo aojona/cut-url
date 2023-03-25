@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.service;
+package ru.kirill.cuturl.service;
 
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ru.kirill.cuturl.dto.UrlRequest;
 import ru.kirill.cuturl.dto.UrlResponse;
 import ru.kirill.cuturl.entity.Url;
-import ru.kirill.cuturl.integration.IntegrationTestBase;
-import ru.kirill.cuturl.integration.util.TestDtoBuilder;
+import ru.kirill.cuturl.IntegrationTestBase;
+import ru.kirill.cuturl.util.TestDtoBuilder;
 
 import java.util.stream.Stream;
 

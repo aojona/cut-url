@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.util;
+package ru.kirill.cuturl.util;
 
 import lombok.experimental.UtilityClass;
 import org.springframework.validation.BindingResult;

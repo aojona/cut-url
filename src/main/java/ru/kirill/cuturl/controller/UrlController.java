@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.controller;
+package ru.kirill.cuturl.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -11,8 +11,8 @@ import ru.kirill.cuturl.dto.UrlRequest;
 import ru.kirill.cuturl.dto.UrlResponse;
 import ru.kirill.cuturl.entity.Url;
 import ru.kirill.cuturl.exception.ShortUrlNotCreatedException;
-import ru.kirill.cuturl.integration.service.UrlService;
-import ru.kirill.cuturl.integration.util.BindingResultUtil;
+import ru.kirill.cuturl.service.UrlService;
+import ru.kirill.cuturl.util.BindingResultUtil;
 
 @RestController
 @RequiredArgsConstructor

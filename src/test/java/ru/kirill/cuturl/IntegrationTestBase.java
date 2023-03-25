@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration;
+package ru.kirill.cuturl;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;

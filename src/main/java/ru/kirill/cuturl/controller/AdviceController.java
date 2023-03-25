@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.controller;
+package ru.kirill.cuturl.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

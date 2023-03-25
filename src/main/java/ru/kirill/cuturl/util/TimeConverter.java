@@ -1,4 +1,4 @@
-package ru.kirill.cuturl.integration.util;
+package ru.kirill.cuturl.util;
 
 import java.util.concurrent.TimeUnit;
 
