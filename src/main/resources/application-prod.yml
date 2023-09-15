@@ -1,0 +1,15 @@
+spring:
+  cache:
+    redis:
+      time-to-live: 24h     # expiration time in cache, supported units: ns, us, ms, s, m, h, d
+  data:
+    redis:
+      host: redis
+
+redis:
+  time-to-live: 100         # expiration time in db: must be more 0
+  time-unit: days           # unit of expiration time: milliseconds, seconds, minutes, hours or days
+
+strategy:
+  encoder: SHA-256          # encoder: Base62, MurMur3, SHA-256
+  token-length: 5           # length of token in short url: must be in range 1..32
